@@ -1,0 +1,374 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Beers of the World</title>
+    
+<script language="javascript">
+<!--
+/*
+<body>
+</body>
+</html>
+*/
+-->
+</script>
+    
+<link href="alcohol.css"
+  rel="stylesheet"
+  type="text/css">
+    
+    
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+    </script>
+    
+</head>
+<body>
+
+<div id="titletext">Beers of the World</div>
+<div id="outercontainer">
+    <div id="left">
+        <div id="introtext">
+            <p>Welcome!</p>
+
+            <p>This page will lead you on an exploratory beer adventure! You can use the interactive google map & beer title to discover where
+            in the world these beers come from. Make a guess on your own first! You can use the contextual clues listed below each beer name.</p>
+
+            <p>We created this page using the Google developer tools for Google Maps.  Once you click on the button with the name of the beer on
+            it, you will be transported to the place in the world where the beer comes from, where an icon of a beer bottle will appear.</p>
+
+            <p>-- Allara, Kenny, Tiffanie, & Sophia</p> </div>
+        
+            <div id="map-canvas"> </div>
+    </div>
+    
+    <div id="beerlist">
+        <div id="titlebox"><span class="title">test your </span><span class="titleemphasis">knowledge</span></div>
+        
+        <div id = "buttonGroup">
+	<input type="button" id = "USA" value="Bud Light" onclick = "usa()"/> </br>
+        This is Budweiser's flagship light beer that was originally introduced in 1982. It is sold in nearly 20 countries across the world.<br/><br/>
+        
+        <input type="button" id = "Mexico" value="Cerveza Pacifico Clara" onclick = "mexico()"/> </br>
+        Better known as Pacifico, this blonde beer was brought to the world in 1954 by the Modelo Group.<br/><br/>
+        
+        <input type="button" id = "Belgium" value="Stella Artois" onclick = "belgium()"/> </br>
+        Originally launched as a festive beer named after the Christmas Star, Stella officially became available year round during WWII.<br/><br/>
+        
+        <input type="button" id = "Netherlands" value="Heineken" onclick = "net()"/> </br>
+        This beer is a pale lager bade of purified water, malted barley, hops and yeast. Today it produces 2.74 billion liters of the beer every
+        year.<br/><br/>
+        
+        <input type="button" id = "Dublin" value="Guinness" onclick = "dublin()"/> </br>
+        This dry stout is one of the most successful beer brands worldwide.  It features a burnt flavor derived from unmalted barley.<br/><br/>
+        
+        <input type="button" id = "Victoria" value="Victoria Bitter" onclick = "victoria()"/> </br>
+        Owned by Foster's Group, this beer gained popularity in the 1960's with an innovative TV ad campaign with the theme of The Magnificent
+        Seven. This beer uses a portion of cane sugar to thin out the beer.<br/><br/>
+        
+        <input type="button" id = "Germany" value="Becks" onclick = "germany()"/> </br>
+        This beer was owned by local families until 2002 when it was sold to Interbrew. The logo is a key, and the mirror image of the coat of
+        arms of Bremen.<br/><br/>
+        
+        <input type="button" id = "Japan" value="Sapporo" onclick = "japan()"/> </br>
+        Founded in 1876, this beer company, led by German-trained brewer Seibei Nakagawa, revolutionized the brewing of rice-based beer.<br/><br/>
+        
+        <input type="button" id = "Taiwan" value="Tsingtao" onclick = "taiwan()"/> </br>
+        This beer's logo displays an image of Zhan Qiao - a famous pier on this country's southern shore.<br/><br/>
+        
+        <input type="button" id = "Korea" value="Hite" onclick = "korea()"/><br/>
+        This company's main products are beer, rice wine, and mineral water.  This beer is a lager that is both sweet and golden with thin body. 
+        </div>
+        
+    </div>
+    
+        <br style="clear: both;"/>
+</div>
+
+
+
+</body>
+
+
+<script type="text/javascript">
+      function initialize() {
+
+	  
+        var mapOptions = {
+          center: new google.maps.LatLng(22, 60),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+	  /*USA SECTION  */
+    //belgium************
+	 var belgium = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(50.5333, 4.7667),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarkers(map, beaches);
+}
+//beligum end***************
+
+ //Netherlands************
+   var net = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(52.3167, 5.5500),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarkers(map, beaches);
+}
+//Netherlands end***************
+
+//Dublin************
+   var dublin = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(53.3478, -6.2597),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarkers(map, beaches);
+}
+//Dublin end***************
+
+//Victoria************
+   var victoria = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(-37.0000, 144.0000),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarks(map, beer);
+}
+//Victoria end***************
+
+//Germany************
+   var germany = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(51.5167, 9.9167),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarks(map, beer);
+}
+//Germany end***************
+
+//Japan************
+   var japan = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(35.0000,  136.0000),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarks(map, beer);
+}
+//Japan end***************
+
+//Taiwan************
+   var taiwan = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(22.9500, 120.2000),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      //setMarkers(map, beaches);
+      setMarks(map, beer);
+}
+//Taiwan end***************
+
+//Korea************
+   var korea = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(37.5665, 126.9780),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      setMarks(map, beer);
+}
+//Korea end***************
+
+	  var usa = function(){
+		 var mapOptions = {
+				center: new google.maps.LatLng(38.8951, -77.0367),
+				zoom: 8
+				
+		 }
+		 var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);	
+
+			setMarkers (map, beaches);
+}
+  var beaches = [
+  ['Washington DC', 38.8591, -77.0367, 4],
+  ['Mexico', 23.2200, -106.4200, 5],
+  ['Belgium', 50.5333,  4.7667, 3],
+  ['Netherlands', 52.3167, 5.5500, 2],
+  ['Dublin', 53.3478, -6.2597, 1]
+   
+];
+
+function setMarkers(map, locations) {
+  // Add markers to the map
+
+  // Marker sizes are expressed as a Size of X,Y
+  // where the origin of the image (0,0) is located
+  // in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker
+  // increase in the X direction to the right and in
+  // the Y direction down.
+  var image = {
+    url: 'beer.png',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    size: new google.maps.Size(200, 320),
+    // The origin for this image is 0,0.
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(20, 32)
+  };
+  // Shapes define the clickable region of the icon.
+  // The type defines an HTML &lt;area&gt; element 'poly' which
+  // traces out a polygon as a series of X,Y points. The final
+  // coordinate closes the poly by connecting to the first
+  // coordinate.
+  var shape = {
+      coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+      type: 'poly'
+  };
+  for (var i = 0; i < locations.length; i++) {
+    var beach = locations[i];
+    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image,
+        shape: shape,
+        title: beach[0],
+        zIndex: beach[3]
+    });
+  }
+}
+//part 2***************************************************
+var beer = [
+  ['Victoria', -37.0000,144.0000, 4],
+  ['Germany', 51.5167, 9.9167, 5],
+  ['Japan', 35.0000,  136.0000, 3],
+  ['Taiwan', 22.9500, 120.2000, 2],
+  ['Korea', 37.5665, 126.9780, 1]
+   
+];
+/*
+Victoria -- 37.0000¡ S, 144.0000¡ E
+Germany -- 51.5167¡ N, 9.9167¡ E
+Japan -- 35.0000¡ N, 136.0000¡ E
+Taiwan -- 22.9500¡ N, 80.2000¡ E
+Korea -- 37.5665¡ N, 86.9780¡ E  */
+function setMarks(map, locations) {
+  // Add markers to the map
+
+  // Marker sizes are expressed as a Size of X,Y
+  // where the origin of the image (0,0) is located
+  // in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker
+  // increase in the X direction to the right and in
+  // the Y direction down.
+
+
+  var image = {
+    url: 'beer.png',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    size: new google.maps.Size(200, 320),
+    // The origin for this image is 0,0.
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(20, 32)
+  };
+  // Shapes define the clickable region of the icon.
+  // The type defines an HTML &lt;area&gt; element 'poly' which
+  // traces out a polygon as a series of X,Y points. The final
+  // coordinate closes the poly by connecting to the first
+  // coordinate.
+  var shape = {
+      coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+      type: 'poly'
+  };
+  for (var i = 0; i < locations.length; i++) {
+    var beach = locations[i];
+    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image,
+        shape: shape,
+        title: beach[0],
+        zIndex: beach[3]
+    });
+  }
+}
+
+//part2*******************************			
+ /*End of USA Section */  
+
+ 
+    var mexico = function(){
+     var mapOptions = {
+        center: new google.maps.LatLng(23.2200, -106.4200),
+        zoom: 8
+        
+     }
+     var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);  
+
+      setMarkers(map, beaches);
+}
+  
+
+	  
+	 google.maps.event.addDomListener(window, 'load', initialize);
+	
+	 
+	 
+
+    </script>  
+
+
+</html>
